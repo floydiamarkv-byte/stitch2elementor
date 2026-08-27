@@ -1,0 +1,54 @@
+{
+  "_comment_1": "MCP CONFIGURATION EXAMPLE FOR stitch2elementor",
+  "_comment_2": "Copy the relevant blocks into your agent's mcp_config.json. Edit manually — never let the agent edit this file.",
+
+  "mcpServers": {
+
+    "StitchMCP": {
+      "_comment": "REQUIRED — reads AI designs from Google Stitch",
+      "command": "npx",
+      "args": [
+        "-y", "mcp-remote",
+        "https://stitch.googleapis.com/mcp",
+        "--header", "X-Goog-Api-Key: YOUR_GOOGLE_API_KEY_HERE"
+      ],
+      "env": {},
+      "disabled": false
+    },
+
+    "wp-elementor-mcp": {
+      "_comment": "REQUIRED — WordPress page management via REST API",
+      "command": "wp-elementor-mcp",
+      "args": [],
+      "env": {
+        "WORDPRESS_BASE_URL": "https://your-domain.com",
+        "WORDPRESS_USERNAME": "your_wp_username",
+        "WORDPRESS_APPLICATION_PASSWORD": "xxxx xxxx xxxx xxxx xxxx xxxx",
+        "WP_MCP_MODE": "advanced"
+      },
+      "disabled": false
+    },
+
+    "elementor-mcp": {
+      "_comment": "REQUIRED — file-based Elementor JSON injection",
+      "command": "elementor-mcp",
+      "args": [],
+      "env": {
+        "WP_URL": "https://your-domain.com",
+        "WP_APP_USER": "your_wp_username",
+        "WP_APP_PASSWORD": "xxxx xxxx xxxx xxxx xxxx xxxx"
+      },
+      "disabled": false
+    }
+  },
+
+  "_notes": {
+    "credentials": "Use the SAME username and Application Password in all 3 servers AND your Node.js scripts. Mismatched credentials cause HTTP 401 errors.",
+    "app_password_format": "WordPress Application Passwords use spaces: 'xxxx xxxx xxxx xxxx xxxx xxxx'. Create at: WP Admin → Users → Profile → Application Passwords.",
+    "api_key": "Get Google API key at: https://console.cloud.google.com/apis/credentials. Enable the Stitch API.",
+    "global_install": "Install MCP servers globally: npm install -g wp-elementor-mcp elementor-mcp. Using npx causes startup timeouts.",
+    "never_edit_from_agent": "NEVER let the agent edit mcp_config.json — it will freeze the IDE.",
+    "disable_unused_mcps": "Set 'disabled: true' on all MCPs not needed for this project (Puppeteer, Figma, etc.) to prevent context dispersion.",
+    "scripts_credentials": "Scripts (fix_slugs.js, replace_stitch_images.js) read credentials from env vars WP_URL, WP_USER, WP_APP_PASSWORD. Never hardcode them."
+  }
+}

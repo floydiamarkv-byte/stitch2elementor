@@ -1,0 +1,16 @@
+{
+  "_comment": "⚠️  PROTOCOLO ID-SHIFTING: Cada re-inyección via sync_and_inject.js asigna NUEVOS IDs en WordPress. Los wp_id listados en 'pages' quedan obsoletos tras cada ejecución. SIEMPRE captura el nuevo ID de la Homepage del log post-inyección y actualiza 'home_id'.",
+  "home_id": null,
+  "blog_id": null,
+  "migration_status": "PENDING",
+  "last_injection_date": null,
+  "pipeline_version": "4.6.7",
+  "pages": [
+    { "html": "homepage.html", "json": "homepage.json", "wp_id": null, "slug": "homepage", "title": "My Website", "is_homepage": true },
+    { "html": "about-us.html", "json": "about-us.json", "wp_id": null, "slug": "about-us", "title": "About Us" },
+    { "html": "services.html", "json": "services.json", "wp_id": null, "slug": "services", "title": "Services" },
+    { "html": "contact.html", "json": "contact.json", "wp_id": null, "slug": "contact", "title": "Contact" },
+    { "html": "blog.html", "json": "blog.json", "wp_id": null, "slug": "blog", "title": "Blog", "is_blog": true },
+    { "html": "privacy-policy.html", "json": "privacy-policy.json", "wp_id": null, "slug": "privacy-policy", "title": "Privacy Policy" }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "stitch2elementor",
+  "version": "27.0.0",
+  "description": "The Universal Deterministic Bridge: Google Stitch AI to WordPress Elementor & Static Web",
+  "main": "compiler_v4.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floydiamarkv-byte/stitch2elementor.git"
+  },
+  "homepage": "https://floydia.site",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node compiler_v4.js",
+    "fix:slugs": "node scripts/fix_slugs.js",
+    "fix:symbols": "node scripts/fix_material_symbols.js",
+    "fix:images": "node scripts/replace_stitch_images.js && node scripts/apply_image_replacements.js",
+    "fix:buttons": "node scripts/fix_buttons.js",
+    "fix:all": "npm run fix:slugs && npm run fix:symbols && npm run fix:images && npm run fix:buttons"
+  },
+  "keywords": [
+    "elementor",
+    "wordpress",
+    "mcp",
+    "ai",
+    "stitch",
+    "antigravity",
+    "floydia"
+  ],
+  "author": "Floydia Labs <floydiamarkv@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "basic-ftp": "^5.0.3",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "firebase": "^12.13.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "firebase-tools": "^15.18.0",
+    "playwright": "^1.59.1",
+    "playwright-core": "^1.52.0"
+  }
+}

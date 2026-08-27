@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070a10" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E676" />
+      <stop offset="50%" stop-color="#00B0FF" />
+      <stop offset="100%" stop-color="#7C4DFF" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E676" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#00B0FF" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#7C4DFF" stop-opacity="0.08" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)" rx="16"/>
+  <rect width="1200" height="400" fill="url(#grid)" rx="16"/>
+  
+  <!-- Glowing Orbs -->
+  <circle cx="200" cy="120" r="150" fill="url(#glowGrad)" filter="url(#glow)"/>
+  <circle cx="1020" cy="280" r="170" fill="url(#glowGrad)" filter="url(#glow)"/>
+
+  <!-- Border -->
+  <rect width="1198" height="398" x="1" y="1" fill="none" stroke="#334155" stroke-width="1.5" rx="15" opacity="0.8"/>
+
+  <!-- Floydia Crystal Emblem Top Center -->
+  <g transform="translate(600, 50) scale(0.28)">
+    <!-- Constellation Lines -->
+    <g stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.75">
+      <line x1="0" y1="-120" x2="0" y2="-90"/>
+      <line x1="0" y1="130" x2="0" y2="70"/>
+      <line x1="-190" y1="0" x2="-60" y2="0"/>
+      <line x1="190" y1="0" x2="60" y2="0"/>
+      <line x1="-80" y1="90" x2="-40" y2="50"/>
+      <line x1="80" y1="90" x2="40" y2="50"/>
+    </g>
+    <!-- Crystal Faces -->
+    <polygon points="0,-80 -75,60 0,0" fill="#00E676"/>
+    <polygon points="0,-80 75,60 0,0" fill="#1e293b"/>
+    <polygon points="-75,60 75,60 0,0" fill="#0284c7"/>
+    <!-- Dots -->
+    <circle cx="0" cy="-120" r="8" fill="#00E676"/>
+    <circle cx="0" cy="130" r="8" fill="#00E676"/>
+    <circle cx="-190" cy="0" r="8" fill="#38bdf8"/>
+    <circle cx="190" cy="0" r="8" fill="#38bdf8"/>
+  </g>
+
+  <!-- Floydia Lab Badge -->
+  <g transform="translate(600, 110)">
+    <rect x="-140" y="-15" width="280" height="30" rx="15" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <circle cx="-108" cy="0" r="4.5" fill="#00E676"/>
+    <text x="5" y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#94a3b8" text-anchor="middle" letter-spacing="2">FLOYDIA LABS • v22.0.0</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="195" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="900" fill="url(#brandGrad)" text-anchor="middle" letter-spacing="-2">
+    stitch2elementor
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="245" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="500" fill="#cbd5e1" text-anchor="middle" letter-spacing="0.2">
+    The Universal Deterministic Bridge for AI Coding Agents
+  </text>
+
+  <!-- Architecture Flow Pill -->
+  <g transform="translate(600, 320)">
+    <rect x="-400" y="-24" width="800" height="48" rx="24" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+    
+    <text x="-275" y="6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#38bdf8" text-anchor="middle">Google Stitch AI</text>
+    <text x="-150" y="7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#64748b" text-anchor="middle">→</text>
+    <text x="-25" y="6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#00E676" text-anchor="middle">Floydia AST Engine</text>
+    <text x="105" y="7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="900" fill="#64748b" text-anchor="middle">→</text>
+    <text x="260" y="6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#fb923c" text-anchor="middle">Elementor Flexbox v4</text>
+  </g>
+</svg>

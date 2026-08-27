@@ -1,0 +1,108 @@
+# ============================================================
+# STITCH2ELEMENTOR — .gitignore (v27.0.0 Zero Leaks)
+# ============================================================
+
+# ── Credenciales y secretos (NUNCA commitear) ───────────────
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*credentials*.json
+mcp_config.json
+.secrets/
+.session/
+
+# ── Archivos de configuración y estado local ────────────────
+pipeline_state.json
+design_system.json
+page_manifest.json
+screen_map.json
+temp_vars.txt
+memoria_estado.md
+task_progress.txt
+custom_antigravity_rules.md
+config_manager.py
+verify_brandbook.mjs
+
+# ── Carpetas internas del agente y workspace ────────────────
+.agent/
+.agents/
+.gemini/
+.vscode/
+.idea/
+archive/
+
+# ── Datos de clientes y assets temporales ───────────────────
+client_data/
+v9_images_temp/
+assets_originales_backup/
+stitch_html/
+homepage_stitch.html
+assets/og-image-*.png
+*.webp
+*.mp4
+*.mov
+*.exe
+*.zip
+*.tar.gz
+
+# ── Notas operacionales internas ────────────────────────────
+*!!.md
+FULL-AUDIT-REPORT.md
+ACTION-PLAN.md
+LEARNING_LOG.md
+MAINTENANCE.md
+to_fix_skill.md
+learning.md
+CONTI!!.md
+stitch2elementor_audit_prompt.md
+auditoria!!.md
+actual!!.md
+clean!!.md
+continue!!.md
+
+# ── Reportes y outputs ──────────────────────────────────────
+seo_reports/
+seo_reports/*
+logs/*
+!logs/README.md
+exports/*
+!exports/README.md
+elementor_jsons/*
+!elementor_jsons/README.md
+assets_originales/*
+!assets_originales/README.md
+
+# ── Dependencias y builds ───────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json.bak
+__pycache__/
+*.pyc
+*.pyo
+*.log
+scratch/
+design-system/
+output/
+temp/
+dist/
+build/
+*.bak*
+
+# ── Archivos de sistema ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Mantener plantillas y ejemplos ──────────────────────────
+!templates/screen_map.example.json
+!templates/page_manifest_example.json
+!templates/mcp_config.example.json
+!templates/design_system_template.json
+!templates/memoria_estado.example.md
+!templates/temp_vars.example.txt
+!mcp_config.example.json
+!.env.example

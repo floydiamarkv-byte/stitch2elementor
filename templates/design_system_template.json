@@ -1,0 +1,49 @@
+{
+  "_comment": "TEMPLATE — Replace ALL values below with your project's brand identity before running the compiler.",
+  "colors": {
+    "background": "#1A1A2E",
+    "paper": "#F5F5F5",
+    "primary": "#0F3460",
+    "accentCta": "#E94560",
+    "primaryDark": "#0A2647",
+    "secondary": "#16213E",
+    "techBlue": "#533483",
+    "amber": "#F5A623",
+    "tertiary": "#E94560",
+    "onSurface": "#E0E0E0",
+    "onSurfaceVariant": "#B0B0B0",
+    "surfaceContainerLowest": "#121224",
+    "surfaceContainerLow": "#1E1E38",
+    "surfaceContainer": "#24243E",
+    "surfaceContainerHigh": "#2E2E4A",
+    "surfaceContainerHighest": "#383856",
+    "white": "#FFFFFF",
+    "textDark": "#1A1A2E",
+    "textMuted": "#6B6B6B",
+    "surfaceCard": "#1E1E38",
+    "outlineVariant": "#3D3D5C"
+  },
+  "fonts": {
+    "headline": "Inter",
+    "body": "Inter",
+    "label": "Inter",
+    "cta": "Inter",
+    "tech": "monospace"
+  },
+  "googleFontsLink": "<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">",
+  "typoScale": {
+    "h1": { "desktop": 48, "tablet": 36, "mobile": 28, "weight": "800" },
+    "h2": { "desktop": 36, "tablet": 30, "mobile": 24, "weight": "700" },
+    "h3": { "desktop": 24, "tablet": 20, "mobile": 18, "weight": "700" },
+    "h4": { "desktop": 20, "tablet": 18, "mobile": 16, "weight": "700" },
+    "h5": { "desktop": 16, "tablet": 15, "mobile": 14, "weight": "600" },
+    "h6": { "desktop": 14, "tablet": 13, "mobile": 12, "weight": "600" }
+  },
+  "logoUrl": "",
+  "logoAlt": "Your Logo",
+  "logoText": "YOUR_BRAND",
+  "whatsappUrl": "",
+  "instagramUrl": "",
+  "facebookUrl": "",
+  "footerData": []
+}
