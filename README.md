@@ -4,6 +4,9 @@
 
 # ⚡ `stitch2elementor` (v27.0.0)
 
+[![CI](https://github.com/floydiamarkv-byte/stitch2elementor/actions/workflows/ci.yml/badge.svg)](https://github.com/floydiamarkv-byte/stitch2elementor/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ### **The Universal Deterministic Bridge: Google Stitch AI ➔ WordPress Elementor & Static Web**
 
 *Turn any AI coding agent into a zero-hallucination frontend engineer that compiles generative UI designs into production-ready, client-editable Elementor Flexbox Containers and blazing-fast Static HTML.*

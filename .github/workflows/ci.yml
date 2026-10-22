@@ -1,0 +1,59 @@
+name: CI — stitch2elementor
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: "Sintaxis JavaScript (node --check)"
+        run: |
+          fail=0
+          for f in $(git ls-files '*.js'); do
+            node --check "$f" || fail=1
+          done
+          exit $fail
+
+      - name: "Compilación Python (py_compile)"
+        run: |
+          fail=0
+          for f in $(git ls-files '*.py'); do
+            python -m py_compile "$f" || fail=1
+          done
+          exit $fail
+
+      - name: "JSON válidos del proyecto"
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+          files = subprocess.run(["git", "ls-files", "*.json"], capture_output=True, text=True).stdout.split()
+          bad = []
+          for f in files:
+              try:
+                  json.load(open(f, encoding="utf-8"))
+              except Exception as exc:
+                  bad.append(f"{f}: {exc}")
+          print(f"json validados: {len(files)}")
+          if bad:
+              print("\n".join(bad))
+              sys.exit(1)
+          PY
